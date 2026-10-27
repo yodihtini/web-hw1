@@ -37,12 +37,10 @@ body {
 }
 
 .badge {
-    position: absolute; top: 12px; left: 12px;
-    top: 12px;
-    left: 12px;
+    position: absolute;
     top: 12px;
     right: 12px;
-    background: #ffc107;
+    background: #4da3ff;
     color: #222;
     padding: 4px 10px;
     border-radius: 999px;
@@ -50,13 +48,11 @@ body {
 }
 
 .rank {
-    position: absolute; top: 12px; left: 12px;
+    position: absolute;
     top: 12px;
     left: 12px;
-    top: 12px;
-    right: 12px;
-    background: #ffc107;
-    color: #222;
+    background: #ff5a5f;
+    color: #fff;
     padding: 4px 10px;
     border-radius: 999px;
     font-weight: bold;
@@ -135,13 +131,38 @@ footer {
     margin: 0 auto 24px;
 }
 
+.detail {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--gap);
+}
+
+.detail-page {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.75)),
+        url("https://image.tmdb.org/t/p/w1280/4tjxYg2AbOzzG9G1YuiT2NzYhlH.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
 @media (min-width: 600px) {
     nav ul {
         flex-direction: row;
         gap: 20px;
     }
+
     .board {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .detail {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .detail img {
+        width: 100%;
     }
 }
 
@@ -153,6 +174,7 @@ footer {
     .hero h3 {
         font-size: 3rem;
     }
+
     .board {
         grid-template-columns: repeat(4, 1fr);
     }
